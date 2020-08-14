@@ -1,0 +1,42 @@
+@font-face 
+    font-family: HelvNeue
+    src: url(../fonts/75-Bold.ttf)
+@font-face
+    font-family: Fira
+    src: url(../fonts/FiraGO-Book.otf)
+
+
+$blue: #3690E6
+$brightblue: #2185E1
+$dark3: #18191A
+$dark2: #242526
+$dark1: #3A3B3C
+$grey: #B0B3B8
+$background: #ebebeb
+$white: #FAFAFA
+
+$tablet-width: 768px
+$desktop-width: 1024px
+
+@mixin tabletPlus()
+    @media screen and (min-width: $tablet-width)
+        @content
+
+@mixin desktopPlus()
+    @media screen and (min-width: $desktop-width)
+        @content
+    
+@mixin centering()
+    display: flex
+    justify-content: center
+    align-items: center
+
+@mixin flexing($justi, $align,)
+    display: flex
+    justify-content: $justi
+    align-items: $align
+@mixin flexingDir($dir, $justi, $align,)
+    display: flex
+    flex-direction: $dir
+    justify-content: $justi
+    align-items: $align

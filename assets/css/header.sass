@@ -1,0 +1,126 @@
+@import variables
+@import defaults
+      
+
+header
+    margin-bottom: 40px
+.header-top
+    height: 50px    
+    color: $grey
+    font-size: 14px
+    line-height: 17px
+    display: none
+    @include tabletPlus()
+        // display: none
+        @include flexing(space-between, center)
+
+.default-infos
+    height: 24px
+    display: flex
+    > span
+        height: 100%
+        display: flex
+        align-items: center
+        &::before
+            content: ''  
+            background-repeat: no-repeat
+            width: 22px
+            height: 22px
+            @include centering()
+            margin-right: 10px
+
+.default-infos-numbers
+    margin-right: 25px
+    &::before
+        background: url(../images/device-mobile.svg)
+.default-infos-mail
+    &::before           
+        background: url(../images/mail.svg)
+
+.header-socials-ul
+    @include flexing(space-between, center)      
+    
+    &::after
+        content: ''
+        position: absolute
+        right: 0
+        background: $dark3
+        height: 50px
+        width: 100%
+        z-index: -1
+
+.header-socials-ul
+    .header-socials-li
+        width: 24px
+        height: 24px
+        &:nth-child(2)
+            margin: 0 15px
+        a
+            height: 100%
+            width: 100%
+            @include centering()
+            path,
+            rect,
+            circle
+                &[stroke="#b0b3b8"]
+                    transition: stroke 400ms
+            &:hover
+                path,
+                rect,
+                circle
+                    &[stroke="#b0b3b8"]
+                        stroke: $blue
+
+
+
+
+        
+    
+.header-bottom            
+    height: 90px
+    @include flexing(space-between, center)
+    font-size: 12px
+    line-height: 14px
+    &::after
+        content: ''
+        position: absolute
+        right: 0
+        background: $white
+        height: 90px
+        width: 100%
+        z-index: -1
+
+.header-logo
+    width: 150px
+    @include tabletPlus()
+        width: unset
+    svg
+        width: 100%
+
+
+.header-nav
+    display: flex
+    align-items: center
+
+.header-nav-ul
+    width: 420px
+    display: none
+
+    @include tabletPlus()
+        @include flexing(space-between, center)
+    
+    .header-nav-ul-li
+        transition: padding 400ms, background 400ms 
+        cursor: pointer
+        border-radius: 22px
+        &.active,
+        &.current
+            padding: 13px 27px 14px 28px
+            background: $blue
+            color: white
+        
+.header-searchbar
+    margin-left: 22px
+    width: 22px
+    height: 22px
+            

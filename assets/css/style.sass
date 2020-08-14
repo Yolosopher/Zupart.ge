@@ -1,0 +1,108 @@
+@import variables
+@import defaults
+@import header
+// @import footer
+
+footer
+    margin-top: 40px
+    height: 258px
+    @include tabletPlus()
+        height: 150px
+    position: relative
+    font-size: 12px
+    line-height: 14px  
+    color: $dark3 
+    @include flexingDir(column, space-between, initial)
+    > *
+        flex: 1
+
+    &::after
+        content: ''
+        width: 100vw
+        height: 258px
+        position: absolute
+        left: -15px
+        @include tabletPlus()
+            left: calc( (100vw - 1126px + 30px) / -2 )
+            height: 150px
+        bottom: 0       
+        z-index: -1
+        background: $white
+        // transform: translateY(50%)
+
+.footer-inside-top
+    display: none
+    @include tabletPlus()
+        @include flexing(space-between, center)
+    .footer-nav
+        width: 364px
+    .footer-nav-ul
+        @include flexing(space-between, center)
+    .footer-nav-ul-li
+        transition: color 400ms
+        &:hover
+            color: $brightblue
+        
+.footer-infos
+    .default-infos-mail
+        &::before
+            background: url(../images/mail-black.svg)
+    .default-infos-numbers
+        &::before
+            background: url(../images/device-mobile-black.svg)
+            
+
+
+
+
+.footer-inside-bottom
+    .default-infos
+        font-size: 14px
+        line-height: 17px
+        color: $dark1
+        height: unset
+        .default-infos-numbers
+            margin-right: 0
+            margin-bottom: 10px
+            @include tabletPlus()
+                margin-right: 25px
+                margin-bottom: 0
+        @include flexingDir(column, space-evenly, center)
+
+        @include tabletPlus()
+            height: 46px
+            @include flexingDir(row, space-evenly, center)
+            
+
+    @include flexingDir(column, space-evenly, center)
+    
+    @include tabletPlus()    
+        @include flexingDir(row, space-between, center)
+    &::after
+        content: ''
+        position: absolute
+        top: 108px
+        height: 1px
+        width: 100%
+        background: $grey
+        opacity: .2
+        @include tabletPlus()
+            top: 50%
+
+    
+    
+
+.creator
+    span
+        color: $blue
+            
+// hidden on desktop elements 
+.header-socials-ul
+    &.footer-socials-ul
+        @include tabletPlus()
+            display: none
+        .header-socials-li:nth-child(2)
+            margin: 0 10px
+.creator-respo
+    @include tabletPlus()
+        display: none
