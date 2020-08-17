@@ -419,6 +419,7 @@ footer::after {
 }
 
 .footer-inside-bottom {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -506,7 +507,7 @@ footer::after {
 .footer-inside-bottom::after {
   content: '';
   position: absolute;
-  top: 105px;
+  top: 108px;
   height: 1px;
   width: 100%;
   background: #B0B3B8;
@@ -515,8 +516,7 @@ footer::after {
 
 @media screen and (min-width: 768px) {
   .footer-inside-bottom::after {
-    content: none;
-    top: 50%;
+    top: 0;
   }
 }
 

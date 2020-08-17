@@ -54,6 +54,7 @@ footer
 
 
 .footer-inside-bottom
+    position: relative
     .default-infos
         font-size: 14px
         line-height: 17px
@@ -79,14 +80,13 @@ footer
     &::after
         content: ''
         position: absolute
-        top: 105px
+        top: 108px
         height: 1px
         width: 100%
         background: $grey
         opacity: .2
         @include tabletPlus()
-            content: none
-            top: 50%
+            top: 0
 
     
     
