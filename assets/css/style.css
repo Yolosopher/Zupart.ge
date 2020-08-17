@@ -676,8 +676,15 @@ main.home > p {
 
 article.about h1 {
   margin-bottom: 39px;
-  font-size: 26px;
-  line-height: 31px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  article.about h1 {
+    font-size: 26px;
+    line-height: 31px;
+  }
 }
 
 article.about p {
@@ -698,6 +705,8 @@ article.about img {
   height: 150px;
   -o-object-fit: cover;
      object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
   border-radius: 10px;
 }
 
@@ -705,5 +714,87 @@ article.about img {
   article.about img {
     height: 190px;
   }
+}
+
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
+main.contact h1 {
+  margin-bottom: 39px;
+  font-size: 18px;
+  line-height: 21px;
+}
+
+@media screen and (min-width: 768px) {
+  main.contact h1 {
+    font-size: 26px;
+    line-height: 31px;
+    margin-bottom: 29px;
+  }
+}
+
+main.contact .map-div {
+  width: 100%;
+  height: 150px;
+  margin-bottom: 39px;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+@media screen and (min-width: 768px) {
+  main.contact .map-div {
+    height: 190px;
+    margin-bottom: 39px;
+  }
+}
+
+iframe {
+  width: 100%;
+  height: 100%;
+}
+
+.contact-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.contact-li-element {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
 /*# sourceMappingURL=style.css.map */
