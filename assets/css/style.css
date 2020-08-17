@@ -588,6 +588,26 @@ footer::after {
   src: url(../fonts/FiraGO-Regular.ttf);
 }
 
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
 @media only screen and (max-width: 768px) {
   main.home {
     padding: 0;
@@ -621,10 +641,16 @@ main.home > p {
   display: grid;
   -ms-grid-columns: (166px)[auto-fit];
       grid-template-columns: repeat(auto-fit, 166px);
-  grid-gap: 26px;
+  grid-gap: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-main-ul {
+    grid-gap: 26px;
+  }
 }
 
 .home-main-ul-li {
