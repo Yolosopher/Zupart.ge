@@ -5,7 +5,12 @@
 
 @font-face {
   font-family: Fira;
-  src: url(../fonts/FiraGO-Book.otf);
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
 
 @font-face {
@@ -15,7 +20,12 @@
 
 @font-face {
   font-family: Fira;
-  src: url(../fonts/FiraGO-Book.otf);
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
 
 * {

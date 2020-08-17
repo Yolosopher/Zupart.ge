@@ -3,8 +3,10 @@
     src: url(../fonts/75-Bold.ttf)
 @font-face
     font-family: Fira
-    src: url(../fonts/FiraGO-Book.otf)
-
+    src: url(../fonts/FIRAGO-BOOK.TTF)
+@font-face
+    font-family: Helvetica Neue
+    src: url(../fonts/MyriadGEOMtavruliMedium.ttf)
 
 $blue: #3690E6
 $brightblue: #2185E1
@@ -20,6 +22,10 @@ $desktop-width: 1024px
 
 @mixin tabletPlus()
     @media screen and (min-width: $tablet-width)
+        @content
+
+@mixin px1126Plus()
+    @media screen and (min-width: 1126px)
         @content
 
 @mixin desktopPlus()

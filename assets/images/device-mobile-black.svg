@@ -1,6 +1,6 @@
 <svg id="device-mobile" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
   <path id="Path_913" data-name="Path 913" d="M0,0H24V24H0Z" fill="none"/>
-  <rect id="Rectangle_43" data-name="Rectangle 43" width="10" height="16" rx="1" transform="translate(7 4)" fill="none" stroke="#18191A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <path id="Path_914" data-name="Path 914" d="M11,5h2" fill="none" stroke="#18191A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
-  <path id="Path_915" data-name="Path 915" d="M12,17v.01" fill="none" stroke="#18191A" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <rect id="Rectangle_43" data-name="Rectangle 43" width="10" height="16" rx="1" transform="translate(7 4)" fill="none" stroke="#3A3B3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path id="Path_914" data-name="Path 914" d="M11,5h2" fill="none" stroke="#3A3B3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
+  <path id="Path_915" data-name="Path 915" d="M12,17v.01" fill="none" stroke="#3A3B3C" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"/>
 </svg>

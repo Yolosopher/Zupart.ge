@@ -23,8 +23,10 @@ footer
         position: absolute
         left: -15px
         @include tabletPlus()
-            left: calc( (100vw - 1126px + 30px) / -2 )
+            left: -15px
             height: 150px
+        @include px1126Plus()
+            left: calc( (100vw - 1126px + 30px) / -2 )
         bottom: 0       
         z-index: -1
         background: $white
@@ -44,6 +46,11 @@ footer
             color: $brightblue
         
 .footer-infos
+    order: -2
+    margin-top: 30px
+    @include tabletPlus()
+        order: unset
+        margin-top: 0
     .default-infos-mail
         &::before
             background: url(../images/mail-black.svg)
@@ -74,14 +81,14 @@ footer
             @include flexingDir(row, space-evenly, center)
             
 
-    @include flexingDir(column, space-evenly, center)
+    @include flexingDir(column, space-between, center)
     
     @include tabletPlus()    
         @include flexingDir(row, space-between, center)
     &::after
         content: ''
         position: absolute
-        top: 108px
+        top: 105px
         height: 1px
         width: 100%
         background: $grey
@@ -99,10 +106,20 @@ footer
 // hidden on desktop elements 
 .header-socials-ul
     &.footer-socials-ul
+        margin-bottom: 30px
+        &::after
+            content: none
         @include tabletPlus()
             display: none
         .header-socials-li:nth-child(2)
             margin: 0 10px
 .creator-respo
+    padding-top: 30px
+    order: -1
     @include tabletPlus()
         display: none
+        order: unset
+.rights-reserved
+    margin-bottom: 10px
+    @include tabletPlus()
+        margin-bottom: unset
