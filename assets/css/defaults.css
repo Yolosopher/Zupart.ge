@@ -44,4 +44,9 @@ body {
   margin: 0 auto;
   padding: 0 15px;
 }
+
+main.container,
+article.container {
+  min-height: calc(100vh - 370px);
+}
 /*# sourceMappingURL=defaults.css.map */

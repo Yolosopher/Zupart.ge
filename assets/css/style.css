@@ -18,26 +18,6 @@
   src: url(../fonts/FiraGO-Regular.ttf);
 }
 
-@font-face {
-  font-family: HelvNeue;
-  src: url(../fonts/75-Bold.ttf);
-}
-
-@font-face {
-  font-family: FiraBook;
-  src: url(../fonts/FIRAGO-BOOK.TTF);
-}
-
-@font-face {
-  font-family: Helvetica Neue;
-  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
-}
-
-@font-face {
-  font-family: FiraRegular;
-  src: url(../fonts/FiraGO-Regular.ttf);
-}
-
 * {
   font-family: HelvNeue;
   margin: 0;
@@ -63,6 +43,31 @@ body {
   max-width: 1156px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+main.container,
+article.container {
+  min-height: calc(100vh - 370px);
+}
+
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
 }
 
 header.container {
@@ -660,5 +665,45 @@ main.home > p {
 
 .home-main-ul-li-quantity span {
   font-family: inherit;
+}
+
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
+article.about h1 {
+  margin-bottom: 39px;
+  font-size: 26px;
+  line-height: 31px;
+}
+
+article.about p {
+  font-size: 14px;
+  line-height: 20px;
+  font-family: FiraBook;
+  padding: 40px 96px 0;
+}
+
+article.about img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 10px;
 }
 /*# sourceMappingURL=style.css.map */
