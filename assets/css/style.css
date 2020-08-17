@@ -520,7 +520,7 @@ footer::after {
   }
 }
 
-.creator span {
+.creator a {
   color: #3690E6;
 }
 
