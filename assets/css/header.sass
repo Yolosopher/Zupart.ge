@@ -110,28 +110,15 @@ header.container
         @include flexing(space-between, center)
     
     .header-nav-ul-li
-        transition: padding 400ms, background 400ms 
         cursor: pointer
         border-radius: 22px
-        &.active,
-        &.current
+        &:hover
+            color: $blue
+        &.active
             padding: 13px 27px 14px 28px
             background: $blue
             color: white
         
-.header-searchbar
-    margin-left: 22px
-    padding: 9.5px 14px
-    background: none
-    border-radius: 22px
-    transition: all 400ms 
-    #Path_906,
-    circle
-        transition: stroke 400ms 
-    &:hover
-        background: $blue
-        #Path_906,  
-        circle  
-            stroke: white
+
 
             

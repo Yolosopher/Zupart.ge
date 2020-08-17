@@ -263,40 +263,18 @@ header.container {
 }
 
 .header-nav-ul .header-nav-ul-li {
-  -webkit-transition: padding 400ms, background 400ms;
-  transition: padding 400ms, background 400ms;
   cursor: pointer;
   border-radius: 22px;
 }
 
-.header-nav-ul .header-nav-ul-li.active, .header-nav-ul .header-nav-ul-li.current {
+.header-nav-ul .header-nav-ul-li:hover {
+  color: #3690E6;
+}
+
+.header-nav-ul .header-nav-ul-li.active {
   padding: 13px 27px 14px 28px;
   background: #3690E6;
   color: white;
-}
-
-.header-searchbar {
-  margin-left: 22px;
-  padding: 9.5px 14px;
-  background: none;
-  border-radius: 22px;
-  -webkit-transition: all 400ms;
-  transition: all 400ms;
-}
-
-.header-searchbar #Path_906,
-.header-searchbar circle {
-  -webkit-transition: stroke 400ms;
-  transition: stroke 400ms;
-}
-
-.header-searchbar:hover {
-  background: #3690E6;
-}
-
-.header-searchbar:hover #Path_906,
-.header-searchbar:hover circle {
-  stroke: white;
 }
 
 footer {
@@ -566,26 +544,6 @@ footer::after {
   .rights-reserved {
     margin-bottom: unset;
   }
-}
-
-@font-face {
-  font-family: HelvNeue;
-  src: url(../fonts/75-Bold.ttf);
-}
-
-@font-face {
-  font-family: FiraBook;
-  src: url(../fonts/FIRAGO-BOOK.TTF);
-}
-
-@font-face {
-  font-family: Helvetica Neue;
-  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
-}
-
-@font-face {
-  font-family: FiraRegular;
-  src: url(../fonts/FiraGO-Regular.ttf);
 }
 
 @font-face {
