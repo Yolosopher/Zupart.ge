@@ -4,13 +4,18 @@
 }
 
 @font-face {
-  font-family: Fira;
+  font-family: FiraBook;
   src: url(../fonts/FIRAGO-BOOK.TTF);
 }
 
 @font-face {
   font-family: Helvetica Neue;
   src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
 }
 
 * {
@@ -30,10 +35,13 @@ a {
 }
 
 body {
-  max-width: 1126px;
-  margin: 0 auto;
   background: #ebebeb;
   color: #18191A;
+}
+
+.container {
+  max-width: 1156px;
+  margin: 0 auto;
   padding: 0 15px;
 }
 /*# sourceMappingURL=defaults.css.map */

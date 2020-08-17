@@ -1,125 +1,63 @@
-@import variables
-@import defaults
 @import header
-// @import footer
+@import footer
+@import variables
+// @import home-main
 
-footer
-    margin-top: 40px
-    height: 258px
-    @include tabletPlus()
-        height: 150px
-    position: relative
-    font-size: 12px
-    line-height: 14px  
-    color: $dark3 
-    @include flexingDir(column, space-between, initial)
-    > *
-        flex: 1
 
-    &::after
-        content: ''
-        width: 100vw
-        height: 258px
-        position: absolute
-        left: -15px
+main.home
+    @media only screen and (max-width: $tablet-width)
+        padding: 0
+    h1
+        font-size: 18px
+        line-height: 21px
+        margin-bottom: 7px
         @include tabletPlus()
-            left: -15px
-            height: 150px
-        @include px1126Plus()
-            left: calc( (100vw - 1126px + 30px) / -2 )
-        bottom: 0       
-        z-index: -1
-        background: $white
-        // transform: translateY(50%)
-
-.footer-inside-top
-    display: none
-    @include tabletPlus()
-        @include flexing(space-between, center)
-    .footer-nav
-        width: 364px
-    .footer-nav-ul
-        @include flexing(space-between, center)
-    .footer-nav-ul-li
-        transition: color 400ms
-        &:hover
-            color: $brightblue
-        
-.footer-infos
-    order: -2
-    margin-top: 30px
-    @include tabletPlus()
-        order: unset
-        margin-top: 0
-    .default-infos-mail
-        &::before
-            background: url(../images/mail-black.svg)
-    .default-infos-numbers
-        &::before
-            background: url(../images/device-mobile-black.svg)
-            
-
-
-
-
-.footer-inside-bottom
-    .default-infos
-        font-size: 14px
-        line-height: 17px
-        color: $dark1
-        height: unset
-        .default-infos-numbers
-            margin-right: 0
-            margin-bottom: 10px
-            @include tabletPlus()
-                margin-right: 25px
-                margin-bottom: 0
-        @include flexingDir(column, space-evenly, center)
-
-        @include tabletPlus()
-            height: 46px
-            @include flexingDir(row, space-evenly, center)
-            
-
-    @include flexingDir(column, space-between, center)
-    
-    @include tabletPlus()    
-        @include flexingDir(row, space-between, center)
-    &::after
-        content: ''
-        position: absolute
-        top: 105px
-        height: 1px
-        width: 100%
-        background: $grey
-        opacity: .2
-        @include tabletPlus()
-            top: 50%
-
-    
-    
-
-.creator
-    span
-        color: $blue
-            
-// hidden on desktop elements 
-.header-socials-ul
-    &.footer-socials-ul
+            margin-bottom: 9px
+            font-size: 26px
+            line-height: 31px
+    > p
+        font-size: 12px       
+        line-height: 14px
+        font-family: FiraBook
         margin-bottom: 30px
-        &::after
-            content: none
-        @include tabletPlus()
-            display: none
-        .header-socials-li:nth-child(2)
-            margin: 0 10px
-.creator-respo
-    padding-top: 30px
-    order: -1
-    @include tabletPlus()
-        display: none
-        order: unset
-.rights-reserved
-    margin-bottom: 10px
-    @include tabletPlus()
-        margin-bottom: unset
+
+
+.home-main-ul
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fit, 166px)
+    grid-gap: 26px
+    justify-content: center
+
+.home-main-ul-li
+    width: 164px
+    @include flexingDir(column, space-between, center)
+
+    
+.home-main-ul-li-aForImg
+    height: 110px
+    width: 100%
+    background: white
+    border-radius: 10px
+    overflow: hidden
+    margin-bottom: 17px
+    img
+        width: 100%
+        height: 100%
+        padding: 15px 43px
+        object-fit: contain
+
+.home-main-ul-li-brandname
+    font-size: 14px
+    line-height: 16px
+    margin-bottom: 8px
+
+.home-main-ul-li-quantity
+    font-size: 12px
+    line-height: 14px
+    font-family: FiraRegular
+    font-weight: 100
+    span
+        font-family: inherit
+    // @include flexingDir(column, space-between, center)
+    

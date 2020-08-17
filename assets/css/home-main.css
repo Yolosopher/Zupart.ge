@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: FiraBook;
+  font-family: Fira;
   src: url(../fonts/FIRAGO-BOOK.TTF);
 }
 
@@ -12,9 +12,4 @@
   font-family: Helvetica Neue;
   src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
-
-@font-face {
-  font-family: FiraRegular;
-  src: url(../fonts/FiraGO-Regular.ttf);
-}
-/*# sourceMappingURL=variables.css.map */
+/*# sourceMappingURL=home-main.css.map */

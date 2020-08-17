@@ -1,0 +1,10 @@
+{
+    "version": 3,
+    "mappings": "ACAA,UAAU;EACN,WAAW,EAAE,QAAQ;EACrB,GAAG,EAAE,yBAAyB;;;AAClC,UAAU;EACN,WAAW,EAAE,IAAI;EACjB,GAAG,EAAE,6BAA6B;;;AACtC,UAAU;EACN,WAAW,EAAE,cAAc;EAC3B,GAAG,EAAE,yCAAyC",
+    "sources": [
+        "home-main.sass",
+        "variables.sass"
+    ],
+    "names": [],
+    "file": "home-main.css"
+}

@@ -1,0 +1,289 @@
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: Fira;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+footer {
+  margin-top: 40px;
+  height: 258px;
+  position: relative;
+  font-size: 12px;
+  line-height: 14px;
+  color: #18191A;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: initial;
+      -ms-flex-align: initial;
+          align-items: initial;
+}
+
+@media screen and (min-width: 768px) {
+  footer {
+    height: 150px;
+  }
+}
+
+footer > * {
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+}
+
+footer::after {
+  content: '';
+  width: 100vw;
+  height: 258px;
+  position: absolute;
+  left: -15px;
+  bottom: 0;
+  z-index: -1;
+  background: #FAFAFA;
+}
+
+@media screen and (min-width: 768px) {
+  footer::after {
+    left: -15px;
+    height: 150px;
+  }
+}
+
+@media screen and (min-width: 1126px) {
+  footer::after {
+    left: calc( (100vw - 1126px + 30px) / -2);
+  }
+}
+
+.footer-inside-top {
+  display: none;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inside-top {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-inside-top .footer-nav {
+  width: 364px;
+}
+
+.footer-inside-top .footer-nav-ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-inside-top .footer-nav-ul-li {
+  -webkit-transition: color 400ms;
+  transition: color 400ms;
+}
+
+.footer-inside-top .footer-nav-ul-li:hover {
+  color: #2185E1;
+}
+
+.footer-infos {
+  -webkit-box-ordinal-group: -1;
+      -ms-flex-order: -2;
+          order: -2;
+  margin-top: 30px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-infos {
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+    margin-top: 0;
+  }
+}
+
+.footer-infos .default-infos-mail::before {
+  background: url(../images/mail-black.svg);
+}
+
+.footer-infos .default-infos-numbers::before {
+  background: url(../images/device-mobile-black.svg);
+}
+
+.footer-inside-bottom {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-inside-bottom .default-infos {
+  font-size: 14px;
+  line-height: 17px;
+  color: #3A3B3C;
+  height: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.footer-inside-bottom .default-infos .default-infos-numbers {
+  margin-right: 0;
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inside-bottom .default-infos .default-infos-numbers {
+    margin-right: 25px;
+    margin-bottom: 0;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inside-bottom .default-infos {
+    height: 46px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: space-evenly;
+        -ms-flex-pack: space-evenly;
+            justify-content: space-evenly;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inside-bottom {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+
+.footer-inside-bottom::after {
+  content: '';
+  position: absolute;
+  top: 105px;
+  height: 1px;
+  width: 100%;
+  background: #B0B3B8;
+  opacity: .2;
+}
+
+@media screen and (min-width: 768px) {
+  .footer-inside-bottom::after {
+    top: 50%;
+  }
+}
+
+.creator span {
+  color: #3690E6;
+}
+
+.header-socials-ul.footer-socials-ul {
+  margin-bottom: 30px;
+}
+
+.header-socials-ul.footer-socials-ul::after {
+  content: none;
+}
+
+@media screen and (min-width: 768px) {
+  .header-socials-ul.footer-socials-ul {
+    display: none;
+  }
+}
+
+.header-socials-ul.footer-socials-ul .header-socials-li:nth-child(2) {
+  margin: 0 10px;
+}
+
+.creator-respo {
+  padding-top: 30px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+}
+
+@media screen and (min-width: 768px) {
+  .creator-respo {
+    display: none;
+    -webkit-box-ordinal-group: unset;
+        -ms-flex-order: unset;
+            order: unset;
+  }
+}
+
+.rights-reserved {
+  margin-bottom: 10px;
+}
+
+@media screen and (min-width: 768px) {
+  .rights-reserved {
+    margin-bottom: unset;
+  }
+}
+/*# sourceMappingURL=footer.css.map */
