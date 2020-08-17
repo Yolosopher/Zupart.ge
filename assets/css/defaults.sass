@@ -23,4 +23,6 @@ body
 main,
 article
     &.container
-        min-height: calc(100vh - 370px)
+        min-height: calc(100vh - 428px)
+        @include tabletPlus()
+            min-height: calc(100vh - 370px)

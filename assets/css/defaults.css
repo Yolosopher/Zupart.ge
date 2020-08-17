@@ -47,6 +47,13 @@ body {
 
 main.container,
 article.container {
-  min-height: calc(100vh - 370px);
+  min-height: calc(100vh - 428px);
+}
+
+@media screen and (min-width: 768px) {
+  main.container,
+  article.container {
+    min-height: calc(100vh - 370px);
+  }
 }
 /*# sourceMappingURL=defaults.css.map */
