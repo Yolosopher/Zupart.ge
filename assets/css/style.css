@@ -277,8 +277,26 @@ header.container {
 
 .header-searchbar {
   margin-left: 22px;
-  width: 22px;
-  height: 22px;
+  padding: 9.5px 14px;
+  background: none;
+  border-radius: 22px;
+  -webkit-transition: all 400ms;
+  transition: all 400ms;
+}
+
+.header-searchbar #Path_906,
+.header-searchbar circle {
+  -webkit-transition: stroke 400ms;
+  transition: stroke 400ms;
+}
+
+.header-searchbar:hover {
+  background: #3690E6;
+}
+
+.header-searchbar:hover #Path_906,
+.header-searchbar:hover circle {
+  stroke: white;
 }
 
 footer {
