@@ -18,6 +18,11 @@
   src: url(../fonts/FiraGO-Regular.ttf);
 }
 
+@font-face {
+  font-family: FiraBold;
+  src: url(../fonts/FiraGO-Bold.ttf);
+}
+
 * {
   font-family: HelvNeue;
   margin: 0;

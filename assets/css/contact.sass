@@ -1,0 +1,56 @@
+main.contact
+    h1
+        margin-bottom: 29px
+        font-size: 18px
+        line-height: 21px
+        @include tabletPlus()
+            font-size: 26px
+            line-height: 31px
+            margin-bottom: 39px
+    .map-div
+        width: 100%
+        height: 150px
+        margin-bottom: 29px
+        @include tabletPlus()        
+            height: 190px
+            margin-bottom: 39px        
+        
+        border-radius: 10px
+        overflow: hidden
+        
+
+iframe
+    width: 100%
+    height: 100%
+
+.contact-ul
+    @include flexingDir(column, flex-start, flex-start)
+    
+    @include tabletPlus()
+        flex-direction: unset
+        @include flexing(space-between, flex-start)
+
+.contact-ul-li
+    max-width: 168px
+    margin-bottom: 15px
+    @include tabletPlus()
+        margin-bottom: unset
+
+.contact-li-heading
+    margin-bottom: 15px
+    color: $dark2
+    font-size: 14px
+    line-height: 16px
+    opacity: .5
+    font-family: HelvNeue
+
+.contact-li-element
+    @include flexingDir(column, space-between, flex-start)
+    font-size: 12px
+    line-height: 14px
+    color: $dark3
+    font-family: FiraBold
+    span
+        &:first-child
+            margin-bottom: 8px
+            

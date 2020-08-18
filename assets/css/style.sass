@@ -3,36 +3,4 @@
 @import footer
 @import home-main
 @import about
-@import variables
-
-main.contact
-    // width: 100%
-    h1
-        margin-bottom: 29px
-        font-size: 18px
-        line-height: 21px
-        @include tabletPlus()
-            font-size: 26px
-            line-height: 31px
-            margin-bottom: 39px
-    .map-div
-        width: 100%
-        height: 150px
-        margin-bottom: 29px
-        @include tabletPlus()        
-            height: 190px
-            margin-bottom: 39px        border-radius: 10px
-        overflow: hidden
-        
-
-iframe
-    width: 100%
-    height: 100%
-
-.contact-ul
-    
-    @include flexing(space-between, flex-start)
-    
-.contact-li-element
-    @include flexingDir(column, space-between, flex-start)
-    
+@import contact

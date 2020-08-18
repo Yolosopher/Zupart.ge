@@ -17,4 +17,9 @@
   font-family: FiraRegular;
   src: url(../fonts/FiraGO-Regular.ttf);
 }
+
+@font-face {
+  font-family: FiraBold;
+  src: url(../fonts/FiraGO-Bold.ttf);
+}
 /*# sourceMappingURL=variables.css.map */
