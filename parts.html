@@ -474,6 +474,7 @@
     <script src="assets/js/main.js"></script>
     <script>
         $('.products-a-outter').click(function () {
+            $('.products-li-inside-ul').removeClass('active');
             $('.products-li-inside-ul-li').removeClass('active');
             setTimeout(() => {
                 if ($(this).parent().hasClass('active')) {
@@ -482,8 +483,11 @@
                 } else {
                     $('.products-ul-li.active').removeClass('active');
                     $(this).parent().toggleClass('active');
+                    let nextUl = $(this).next();
+                    nextUl.toggleClass('active');
                 }
             }, 1);
+
         });
         $('.products-li-inside-ul-li').click(function () {
             $('.products-li-inside-ul-li').removeClass('active');
