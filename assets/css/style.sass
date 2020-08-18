@@ -6,6 +6,7 @@
 @import contact
 
 @import variables
+
 main.products
     h1
         font-family: HelvNeue
@@ -36,6 +37,29 @@ aside
         padding: 30px
         border-radius: 10px
 
+
+.products-li-inside-ul  
+    box-sizing: content-box    
+    padding-left: 20px
+    color: $dark2
+    max-height: 0
+    display: block
+    overflow: hidden
+    animation: none
+    &.active 
+        max-height: unset
+        margin-top: 9px  
+        box-sizing: border-box
+        animation: maxHeight 1s
+
+@keyframes maxHeight
+    0%
+        max-height: 0
+    100%
+        max-height: 60px
+    
+
+
 .products-ul-li
     margin-bottom: 16px
     font-size: 14px
@@ -43,10 +67,8 @@ aside
     font-family: FiraBold
     color: $dark2
     position: relative 
+    overflow: hidden
     &.active
-        .products-li-inside-ul
-            display: block
-            height: unset
         .products-a-outter
             color: $blue
             &::after
@@ -65,13 +87,7 @@ aside
         margin-bottom: 0
   
 
-.products-li-inside-ul
-    display: none
-    margin-top: 9px
-    padding-left: 20px
-    color: $dark2
-    height: 0
-    transition: height 400ms
+
 
     .products-li-inside-ul-li
         font-size: 12px
