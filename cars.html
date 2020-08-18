@@ -149,7 +149,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -209,7 +209,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -224,7 +224,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -239,7 +239,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -254,7 +254,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -269,7 +269,7 @@
                         <ul class="products-li-inside-ul">
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
-                            </li>                      
+                            </li>
                             <li class="products-li-inside-ul-li">
                                 <a class="products-a-inner" href="#">RX350/450h 2016 -
                                     2020</a>
@@ -473,22 +473,23 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        $('.products-a-outter').click(function(){
-            setTimeout(() => {                
-                if($(this).parent().hasClass('active')) {
+        $('.products-a-outter').click(function () {
+            $('.products-li-inside-ul-li').removeClass('active');
+            setTimeout(() => {
+                if ($(this).parent().hasClass('active')) {
                     $(this).parent().removeClass('active');
                     $('.products-ul-li.active').removeClass('active');
                 } else {
                     $('.products-ul-li.active').removeClass('active');
                     $(this).parent().toggleClass('active');
                 }
-            }, 1);            
+            }, 1);
         });
-        $('.products-li-inside-ul-li').click(function(){
+        $('.products-li-inside-ul-li').click(function () {
             $('.products-li-inside-ul-li').removeClass('active');
             setTimeout(() => {
                 $(this).toggleClass('active');
-            }, 1);            
+            }, 1);
         });
     </script>
 </body>

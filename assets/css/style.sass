@@ -93,17 +93,22 @@ section
     flex: 1
 .section-ul
     width: 100%
-    // flex: 1
     display: grid
     grid-template-columns: repeat(auto-fit, 262px)
     grid-gap: 15px
     justify-content: center
     @include tabletPlus()
+        grid-template-columns: repeat(auto-fit, 205px)
+    @include desktopPlus()
         grid-gap: 26px
+        grid-template-columns: repeat(auto-fit, 262px)
 
 .section-ul-li
     width: 262px
-    
+    @include tabletPlus()
+        width: 205px
+    @include desktopPlus()
+        width: 262px
     a
         width: 100%
         height: 120px

@@ -33,6 +33,7 @@ main.home h1 {
   font-size: 18px;
   line-height: 21px;
   margin-bottom: 7px;
+  padding-left: 15px;
 }
 
 @media screen and (min-width: 768px) {
@@ -40,6 +41,7 @@ main.home h1 {
     margin-bottom: 9px;
     font-size: 26px;
     line-height: 31px;
+    padding-left: 0;
   }
 }
 
@@ -48,6 +50,13 @@ main.home > p {
   line-height: 14px;
   font-family: FiraBook;
   margin-bottom: 30px;
+  padding-left: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  main.home > p {
+    padding-left: 0;
+  }
 }
 
 .home-main-ul {
