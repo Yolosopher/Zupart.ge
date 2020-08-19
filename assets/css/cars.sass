@@ -1,0 +1,138 @@
+main.products
+    h1
+        font-family: HelvNeue
+        font-size: 18px
+        line-height: 21px
+        margin-bottom: 7px
+        @include tabletPlus()
+            font-size: 26px
+            line-height: 31px
+            margin-bottom: 9px
+    p
+        font-family: FiraBook
+        font-size: 12px
+        line-height: 14px
+.products-insider-div
+    display: flex
+    margin-top: 30px
+aside
+    max-width: 262px
+    width: 100%
+    border-radius: 10px
+    margin-right: 26px
+    display: none
+    @include tabletPlus()
+        display: block
+    .products-ul
+        background: white
+        padding: 30px
+        border-radius: 10px
+
+
+.products-li-inside-ul  
+    box-sizing: content-box    
+    padding-left: 20px
+    color: $dark2
+    max-height: 0
+    display: block
+    overflow: hidden
+    animation: none
+    &.active 
+        max-height: unset
+        margin-top: 9px  
+        box-sizing: border-box
+        animation: maxHeight 1s
+
+@keyframes maxHeight
+    0%
+        max-height: 0
+    100%
+        max-height: 60px
+    
+
+
+.products-ul-li
+    margin-bottom: 16px
+    font-size: 14px
+    line-height: 17px
+    font-family: FiraBold
+    color: $dark2
+    position: relative 
+    overflow: hidden
+    &.active
+        .products-a-outter
+            color: $blue
+            &::after
+                content: url(../images/arrow-active.svg)
+    .products-a-outter
+        &::after
+            position: absolute
+            content: url(../images/arrow-down.svg)
+            display: flex
+            right: 0
+            top: 0
+            @include centering()
+        &:hover
+            color: $blue
+    &:last-child
+        margin-bottom: 0
+  
+
+
+
+    .products-li-inside-ul-li
+        font-size: 12px
+        line-height: 14px
+        font-family: HelvNeue
+        margin-bottom: 9px
+        &:last-child
+            margin-bottom: 0
+
+.products-li-inside-ul-li
+    &.active,
+        .products-a-inner
+            color: $blue
+    .products-a-inner
+        &:hover
+            color: $blue
+
+section
+    flex: 1
+.section-ul
+    width: 100%
+    display: grid
+    grid-template-columns: repeat(auto-fit, 262px)
+    grid-gap: 15px
+    justify-content: center
+    @include tabletPlus()
+        grid-template-columns: repeat(auto-fit, 205px)
+    @include desktopPlus()
+        grid-gap: 26px
+        grid-template-columns: repeat(auto-fit, 262px)
+
+.section-ul-li
+    width: 262px
+    @include tabletPlus()
+        width: 205px
+    @include desktopPlus()
+        width: 262px
+    a
+        width: 100%
+        height: 120px
+        margin-bottom: 10px
+        background: white
+        display: block
+        border-radius: 10px
+        overflow: hidden
+        img
+            width: 100%
+            height: 100%
+            padding: 10px 60px
+            object-fit: contain
+
+    h2
+        font-family: FiraBold
+        text-align: center
+        font-size: 14px
+        line-height: 17px
+        color: $dark2
