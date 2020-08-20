@@ -580,28 +580,31 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-        $('.products-a-outter').click(function () {
-            $('.products-li-inside-ul').removeClass('active');
-            $('.products-li-inside-ul-li').removeClass('active');
+      $('.products-a-outter').click(function () {
+        $('.products-li-inside-ul').removeClass('active');
+        $('.products-li-inside-ul-li').removeClass('active');
+        if ($(this).parent().hasClass('active')) {
+            $(this).parent().removeClass('active');
+            $('.products-ul-li.active').removeClass('active');
+            let nextUl = $(this).next();
+            nextUl.removeClass('active');
+            nextUl.addClass('removing');    
             setTimeout(() => {
-                if ($(this).parent().hasClass('active')) {
-                    $(this).parent().removeClass('active');
-                    $('.products-ul-li.active').removeClass('active');
-                } else {
-                    $('.products-ul-li.active').removeClass('active');
-                    $(this).parent().toggleClass('active');
-                    let nextUl = $(this).next();
-                    nextUl.toggleClass('active');
-                }
-            }, 1);
-
-        });
-        $('.products-li-inside-ul-li').click(function () {
-            $('.products-li-inside-ul-li').removeClass('active');
-            setTimeout(() => {
-                $(this).toggleClass('active');
-            }, 1);
-        });
+                nextUl.removeClass('removing');
+            }, 1000);
+        } else {
+            $('.products-ul-li.active').removeClass('active');
+            $(this).parent().toggleClass('active');
+            let nextUl = $(this).next();
+            nextUl.toggleClass('active');
+        }
+      });
+      $('.products-li-inside-ul-li').click(function () {
+        $('.products-li-inside-ul-li').removeClass('active');
+        setTimeout(() => {
+          $(this).toggleClass('active');
+        }, 1);
+      });
     </script>
 </body>
 
