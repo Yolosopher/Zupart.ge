@@ -5,7 +5,7 @@ document.addEventListener('DOMContentLoaded', ()=>{
     links = [...links];
 
     let filteredLink = links.filter(link => link.children[0].innerHTML === title)
-    filteredLink[0].classList.add('active');
+    if (filteredLink[0]) filteredLink[0].classList.add('active');
     
 });
 

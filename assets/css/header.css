@@ -23,6 +23,11 @@
   src: url(../fonts/FiraGO-Bold.ttf);
 }
 
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 header.container {
   margin-bottom: 40px;
 }

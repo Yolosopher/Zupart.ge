@@ -23,6 +23,11 @@
   src: url(../fonts/FiraGO-Bold.ttf);
 }
 
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 @media only screen and (max-width: 768px) {
   main.home {
     padding: 0;
