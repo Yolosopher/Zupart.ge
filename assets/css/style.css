@@ -1529,6 +1529,36 @@ section {
   content: url(../images/parts/right-arrow-white.svg);
 }
 
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
+@font-face {
+  font-family: FiraBold;
+  src: url(../fonts/FiraGO-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 .singleProd-top-line-price {
   display: none;
 }
@@ -1815,13 +1845,67 @@ td {
   opacity: 1;
 }
 
-footer {
-  margin-bottom: 80px;
+@media screen and (min-width: 768px) {
+  .respo-fixed-menu {
+    display: none;
+  }
 }
 
-@media screen and (min-width: 768px) {
-  footer {
-    margin-bottom: 0;
-  }
+.respo-fixed-menu.container {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: white;
+}
+
+.respo-fixed-ul {
+  width: 100%;
+  height: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-size: 12px;
+  line-height: 14px;
+  font-family: HelvNeue;
+}
+
+.respo-fixed-ul-li a.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 8px 16px;
+  background: #3690E6;
+  border-radius: 20px;
+}
+
+.respo-fixed-ul-li a.active svg {
+  margin-right: 10px;
+}
+
+.respo-fixed-ul-li a.active svg path[stroke="#b0b3b8"], .respo-fixed-ul-li a.active svg rect[stroke="#b0b3b8"], .respo-fixed-ul-li a.active svg circle[stroke="#b0b3b8"] {
+  stroke: white;
+}
+
+.respo-fixed-ul-li a.active span {
+  display: inline;
+}
+
+.respo-fixed-ul-li a span {
+  display: none;
+  color: white;
 }
 /*# sourceMappingURL=style.css.map */

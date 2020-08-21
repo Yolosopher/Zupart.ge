@@ -1,0 +1,155 @@
+@import variables
+
+.singleProd-top-line-price
+    display: none
+    @include tabletPlus()
+        display: unset
+
+
+.singleProd-top-line-div
+    display: flex
+    justify-content: space-between
+    align-items: center
+    margin-bottom: 7px
+    color: $dark2
+    @include font(18px, 21px)
+    @include tabletPlus()
+        @include font(26px, 31px)
+        
+    h1 
+        @include font(inherit, inherit)
+
+.singleProd-car-name-p
+    margin-bottom: 30px
+    color: $dark2
+    @include font(12px, 14px)
+    
+    @include tabletPlus()
+        margin-bottom: 40px 
+    
+.singleProd-product-div
+    background: white
+    border-radius: 10px
+    min-height: 460px
+    display: flex
+    flex-direction: column
+    padding: 30px
+    @include tabletPlus()
+        min-height: 411px
+        flex-direction: row 
+
+
+.table-container
+    display: flex
+    align-items: center
+    @include tabletPlus()
+        height: 275px
+        padding: 0 30px
+    
+
+.singleProd-slider,
+.singleProd-description-ul,
+.table-container
+    width: 100%
+    @include tabletPlus()
+        width: 50%
+.singleProd-slider
+    margin-bottom: 30px
+    @include tabletPlus()
+        margin-bottom: 0
+    &.zoomed
+
+table
+    color: $dark2
+    width: 100%
+    border-collapse: collapse
+    .part-price-discount
+        margin-left: 10px
+        color: $grey
+        text-decoration: line-through
+th
+    text-align: start
+    width: 50%
+    opacity: .5
+    padding-bottom: 8px
+    @include tabletPlus()
+        padding-bottom: 16px
+tr 
+    &:last-child
+        th           
+            padding-bottom: 0
+    @include font(12px, 14px)
+    @include tabletPlus()
+        @include font(14px, 16px)
+td
+    font-family: FiraBold
+    text-align: end    
+    @include tabletPlus()
+        font-family: FiraBook
+        text-align: start
+        line-height: 20px
+    
+
+// hidden start
+.singleProd-description-ul    
+    padding: 25px
+    @include flexingDir(column, center, flex-start)
+    height: 275px
+    @include font(12px, 14px)
+    @include tabletPlus()
+        @include font(14px, 16px)
+    li      
+        margin-bottom: 14px
+        &:last-child
+            margin-bottom: 0  
+        width: 100%
+        display: flex
+    display: none
+.singleProd-description-ul-li
+    > *
+        &:last-child
+            justify-self: center
+// hidden end
+            
+
+
+
+.singleProd-slider-mainPhoto
+    display: block
+    height: 182px
+    border-radius: 10px
+    border: 1px solid $darkgrey
+    margin-bottom: 8px
+    @include tabletPlus()
+        height: 275px
+        margin-bottom: 16px
+    img
+        width: 100%
+        height: 100%
+        object-fit: contain
+        padding: 8px 10px
+        transition: opacity .4s
+        &.opacity-effect
+            opacity: 0
+.singleProd-slider-photoList ul
+    @include flexing(flex-start, center)
+    li
+        margin-right: 15px
+        &:last-child
+            margin-right: 0
+        a
+            border: 1px solid $darkgrey
+            border-radius: 6px
+            width: 60px
+            height: 60px
+            display: block
+            img
+                padding: 3px
+                object-fit: contain
+                height: 100%
+                width: 100%
+                opacity: .3
+                transition: opacity .4s
+        a.active
+            img
+                opacity: 1
