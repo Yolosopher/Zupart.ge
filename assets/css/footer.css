@@ -4,7 +4,7 @@
 }
 
 @font-face {
-  font-family: Fira;
+  font-family: FiraBook;
   src: url(../fonts/FIRAGO-BOOK.TTF);
 }
 
@@ -13,10 +13,23 @@
   src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
 }
 
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
+@font-face {
+  font-family: FiraBold;
+  src: url(../fonts/FiraGO-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 footer {
-  margin-top: 40px;
   height: 258px;
-  position: relative;
   font-size: 12px;
   line-height: 14px;
   color: #18191A;
@@ -33,6 +46,17 @@ footer {
   -webkit-box-align: initial;
       -ms-flex-align: initial;
           align-items: initial;
+}
+
+footer.container {
+  margin-top: 40px;
+  margin-bottom: 80px;
+}
+
+@media screen and (min-width: 768px) {
+  footer.container {
+    margin-bottom: 0;
+  }
 }
 
 @media screen and (min-width: 768px) {
@@ -52,22 +76,14 @@ footer::after {
   width: 100vw;
   height: 258px;
   position: absolute;
-  left: -15px;
-  bottom: 0;
+  right: 0;
   z-index: -1;
   background: #FAFAFA;
 }
 
 @media screen and (min-width: 768px) {
   footer::after {
-    left: -15px;
     height: 150px;
-  }
-}
-
-@media screen and (min-width: 1126px) {
-  footer::after {
-    left: calc( (100vw - 1126px + 30px) / -2);
   }
 }
 
@@ -139,6 +155,7 @@ footer::after {
 }
 
 .footer-inside-bottom {
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,7 +243,7 @@ footer::after {
 .footer-inside-bottom::after {
   content: '';
   position: absolute;
-  top: 105px;
+  top: 108px;
   height: 1px;
   width: 100%;
   background: #B0B3B8;
@@ -235,11 +252,11 @@ footer::after {
 
 @media screen and (min-width: 768px) {
   .footer-inside-bottom::after {
-    top: 50%;
+    top: 0;
   }
 }
 
-.creator span {
+.creator a {
   color: #3690E6;
 }
 

@@ -1,3 +1,4 @@
+@import variables
 @import defaults
 @import header
 @import footer
@@ -7,7 +8,7 @@
 @import cars
 @import parts
 
-@import variables
+
 
 .singleProd-top-line-price
     display: none
@@ -66,9 +67,9 @@
     margin-bottom: 30px
     @include tabletPlus()
         margin-bottom: 0
+    &.zoomed
 
 table
-    // display: none
     color: $dark2
     width: 100%
     border-collapse: collapse
@@ -162,3 +163,10 @@ td
         a.active
             img
                 opacity: 1
+
+
+// footer
+footer
+    margin-bottom: 80px
+    @include tabletPlus()
+        margin-bottom: 0

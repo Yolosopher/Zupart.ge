@@ -136,17 +136,17 @@
                 <div class="singleProd-slider-photoList">
                     <ul class="singleProd-slider-photoList-ul">
                         <li class="singleProd-slider-photoList-ul-li">
-                            <a href="#">
+                            <a href="javascript:void(0)">
                                 <img src="assets/images/parts/Mask Group 2.jpg" alt="product-image">
                             </a>
                         </li>
                         <li class="singleProd-slider-photoList-ul-li">
-                            <a href="#">
+                            <a href="javascript:void(0)">
                                 <img src="assets/images/parts/Mask Group 1.jpg" alt="product-image">
                             </a>
                         </li>
                         <li class="singleProd-slider-photoList-ul-li">
-                            <a href="#">
+                            <a href="javascript:void(0)">
                                 <img src="assets/images/parts/Image 19.jpg" alt="product-image">
                             </a>
                         </li>
@@ -311,11 +311,11 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+        const mainPhoto = document.getElementById('mainphoto');
         let firstSliderPhoto = $('.singleProd-slider-photoList-ul-li:first-child');
         firstSliderPhoto.find('a').addClass('active');
         function changeMainPic() {
             let src = $('.singleProd-slider-photoList-ul-li a.active img').attr('src');
-            let mainPhoto = document.getElementById('mainphoto');
 
             mainPhoto.classList.add('opacity-effect');
             setTimeout(() => {
@@ -325,7 +325,7 @@
         };
         function resetMainPic() {
             let src = $('.singleProd-slider-photoList-ul-li a.active img').attr('src');
-            document.getElementById('mainphoto').src = src;
+            mainPhoto.src = src;
         };
         $(document).ready(function() {
             resetMainPic();
@@ -335,6 +335,7 @@
                 changeMainPic();
             });
         });
+        
         
     </script>
 </body>

@@ -82,7 +82,7 @@ main.home > p {
   }
 }
 
-.home-main-ul-li {
+.home-main-ul-li a {
   width: 164px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -99,7 +99,7 @@ main.home > p {
           align-items: center;
 }
 
-.home-main-ul-li-aForImg {
+.home-main-ul-li-divForImg {
   height: 110px;
   width: 100%;
   background: white;
@@ -108,7 +108,7 @@ main.home > p {
   margin-bottom: 17px;
 }
 
-.home-main-ul-li-aForImg img {
+.home-main-ul-li-divForImg img {
   width: 100%;
   height: 100%;
   padding: 15px 43px;
