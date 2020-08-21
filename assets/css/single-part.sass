@@ -57,7 +57,14 @@
     margin-bottom: 30px
     @include tabletPlus()
         margin-bottom: 0
-    &.zoomed
+
+.turn-off-zoomed
+    display: none
+    position: absolute
+    
+.black-screen
+    display: none
+    position: absolute
 
 table
     color: $dark2
@@ -91,24 +98,24 @@ td
     
 
 // hidden start
-.singleProd-description-ul    
-    padding: 25px
-    @include flexingDir(column, center, flex-start)
-    height: 275px
-    @include font(12px, 14px)
-    @include tabletPlus()
-        @include font(14px, 16px)
-    li      
-        margin-bottom: 14px
-        &:last-child
-            margin-bottom: 0  
-        width: 100%
-        display: flex
-    display: none
-.singleProd-description-ul-li
-    > *
-        &:last-child
-            justify-self: center
+// .singleProd-description-ul    
+//     padding: 25px
+//     @include flexingDir(column, center, flex-start)
+//     height: 275px
+//     @include font(12px, 14px)
+//     @include tabletPlus()
+//         @include font(14px, 16px)
+//     li      
+//         margin-bottom: 14px
+//         &:last-child
+//             margin-bottom: 0  
+//         width: 100%
+//         display: flex
+//     display: none
+// .singleProd-description-ul-li
+//     > *
+//         &:last-child
+//             justify-self: center
 // hidden end
             
 

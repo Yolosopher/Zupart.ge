@@ -1,5 +1,3 @@
-@import variables
-    
 footer
     &.container
         margin-top: 40px
@@ -121,3 +119,40 @@ footer
     margin-bottom: 10px
     @include tabletPlus()
         margin-bottom: unset
+
+.respo-fixed-menu
+    @include tabletPlus()
+        display: none
+    &.container
+        position: fixed
+        bottom: 0
+        left: 0
+        width: 100%
+        height: 70px
+        background: white
+
+.respo-fixed-ul
+    width: 100%
+    height: 70px
+    @include flexing(space-between, center)
+    @include font(12px, 14px)
+    font-family: HelvNeue    
+.respo-fixed-ul-li
+    a
+        &.active
+            @include flexing(space-between, center)
+            padding: 8px 16px
+            background: $blue
+            border-radius: 20px
+            svg
+                margin-right: 10px
+
+                path, rect, circle
+                    &[stroke="#b0b3b8"]
+                        stroke: white
+            span
+                display: inline
+
+        span
+            display: none
+            color: white

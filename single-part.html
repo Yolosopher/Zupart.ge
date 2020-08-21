@@ -8,7 +8,7 @@
     <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
-<body>
+<body class="hidden">
     <!-- header -->
     <header class="container">
         <div class="header-top">
@@ -129,7 +129,7 @@
         </div>
         <p class="singleProd-car-name-p">TOYOTA</p>
         <div class="singleProd-product-div">
-            <div class="singleProd-slider">
+            <div id="singleProd-slider" class="singleProd-slider zoomed">
                 <a class="singleProd-slider-mainPhoto">
                     <img id="mainphoto" src="assets/images/Image 19@2x.png" alt="picture-of-part">
                 </a>
@@ -152,7 +152,19 @@
                         </li>
                     </ul>
                 </div>
+                <a href="javascript:(0)" class="turn-off-zoomed">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18.385" height="18.385"
+                        viewBox="0 0 18.385 18.385">
+                        <g id="Group_106" data-name="Group 106" transform="translate(-1170.807 -90)">
+                            <rect id="Rectangle_86" data-name="Rectangle 86" width="24" height="2" rx="1"
+                                transform="translate(1170.808 106.971) rotate(-45)" fill="#fff" />
+                            <rect id="Rectangle_87" data-name="Rectangle 87" width="24" height="2" rx="1"
+                                transform="translate(1172.222 90) rotate(45)" fill="#fff" />
+                        </g>
+                    </svg>
+                </a>
             </div>
+            <div class="black-screen"></div>
             <!-- <ul class="singleProd-description-ul">
                 <li class="singleProd-description-ul-li">
                     <span>კოდი:</span><span class="singleProd-code">BM125</span>

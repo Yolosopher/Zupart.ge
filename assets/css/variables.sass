@@ -22,6 +22,7 @@ $blue: #3690E6
 $brightblue: #2185E1
 $dark3: #18191A
 $dark2: #242526
+$dark2transp: #242526CC
 $dark1: #3A3B3C
 $grey: #B0B3B8
 $darkgrey: #B0B3B84D
@@ -37,6 +38,9 @@ $desktop-width: 1024px
 
 @mixin px1126Plus()
     @media screen and (min-width: 1126px)
+        @content
+@mixin sizePlus($width)
+    @media screen and (min-width: $width)
         @content
 
 @mixin desktopPlus()
