@@ -129,7 +129,7 @@
         </div>
         <p class="singleProd-car-name-p">TOYOTA</p>
         <div class="singleProd-product-div">
-            <div id="singleProd-slider" class="singleProd-slider zoomed">
+            <div id="singleProd-slider" class="singleProd-slider">
                 <a class="singleProd-slider-mainPhoto">
                     <img id="mainphoto" src="assets/images/Image 19@2x.png" alt="picture-of-part">
                 </a>
@@ -414,8 +414,12 @@
                 changeMainPic();
             });
         });
-        
-        
+        $('.singleProd-slider-mainPhoto').click(function () {
+            $('#singleProd-slider').addClass('zoomed');
+        });
+        $('.turn-off-zoomed').click(function() {
+            $('#singleProd-slider').removeClass('zoomed');
+        });
     </script>
 </body>
 

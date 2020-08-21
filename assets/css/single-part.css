@@ -213,6 +213,7 @@ td {
   border-radius: 10px;
   border: 1px solid #B0B3B84D;
   margin-bottom: 8px;
+  cursor: pointer;
 }
 
 @media screen and (min-width: 768px) {
