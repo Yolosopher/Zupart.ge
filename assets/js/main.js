@@ -9,6 +9,15 @@ function respoMenu() {
             return;
         }
         filteredSpan[0].children[0].classList.add('active');
+        let parent = $('.respo-fixed-ul-li a.active').parent();
+        parent.css({
+            'margin-right': 'auto',
+            'margin-left': '24px'
+        });
+        parent.prev().css({
+            'margin-right': 0
+        });
+
     }
 };
 

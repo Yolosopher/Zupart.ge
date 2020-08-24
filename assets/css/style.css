@@ -633,6 +633,7 @@ footer::after {
 }
 
 .respo-fixed-ul {
+  padding: 0 5px;
   width: 100%;
   height: 70px;
   display: -webkit-box;
@@ -647,6 +648,14 @@ footer::after {
   font-size: 12px;
   line-height: 14px;
   font-family: HelvNeue;
+}
+
+.respo-fixed-ul-li {
+  margin-right: 20px;
+}
+
+.respo-fixed-ul-li:last-child {
+  margin-right: 0;
 }
 
 .respo-fixed-ul-li a.active {
@@ -1847,7 +1856,7 @@ td {
 
 #singleProd-slider.zoomed {
   width: calc(100% - 30px);
-  height: 500px;
+  height: 345px;
   position: fixed;
   overflow: hidden;
   background: white;
@@ -1863,6 +1872,7 @@ td {
 @media screen and (min-width: 768px) {
   #singleProd-slider.zoomed {
     width: 60%;
+    height: 500px;
     min-width: 700px;
     max-width: 750px;
     padding: 4% 5%;
