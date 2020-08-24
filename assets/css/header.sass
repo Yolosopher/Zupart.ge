@@ -77,9 +77,12 @@ header.container
     
 .header-bottom            
     height: 90px
-    @include flexing(space-between, center)
+    @include flexing(center, center)
+    
     font-size: 12px
     line-height: 14px
+    @include desktopPlus()
+        @include flexing(space-between, center)
     &::after
         content: ''
         position: absolute
