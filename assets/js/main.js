@@ -14,6 +14,11 @@ function respoMenu() {
             'margin-right': 'auto',
             'margin-left': '24px'
         });
+        if (parent[0] == $('.respo-fixed-ul-li')[0]) {
+            parent.css({
+                'margin-left': "0"
+            })
+        };
         parent.prev().css({
             'margin-right': 0
         });
