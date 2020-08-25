@@ -77,7 +77,7 @@ header.container
     
 .header-bottom            
     height: 90px
-    @include flexing(space-between, center)
+    @include flexing(center, center)
     font-size: 12px
     line-height: 14px
     &::after
@@ -88,6 +88,8 @@ header.container
         height: 90px
         width: 100%
         z-index: -1
+    @include desktopPlus()
+        @include flexing(space-between, center)
 
 .header-logo
     width: 150px
