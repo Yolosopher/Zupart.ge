@@ -98,6 +98,12 @@ aside
 
 section
     flex: 1
+.section-ul.cars-ul
+    grid-template-columns: repeat(auto-fit, 165px)
+    @include tabletPlus()
+        grid-template-columns: repeat(auto-fit, 205px)
+    @include desktopPlus()
+        grid-template-columns: repeat(auto-fit, 262px)
 .section-ul
     width: 100%
     display: grid
@@ -110,6 +116,12 @@ section
         grid-gap: 26px
         grid-template-columns: repeat(auto-fit, 262px)
 
+.section-ul-li.cars-li
+    width: 165px
+    @include tabletPlus()
+        width: 205px
+    @include desktopPlus()
+        width: 262px
 .section-ul-li
     width: 262px
     @include tabletPlus()

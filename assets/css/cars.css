@@ -23,6 +23,11 @@
   src: url(../fonts/FiraGO-Bold.ttf);
 }
 
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 main.products h1 {
   font-family: HelvNeue;
   font-size: 18px;
@@ -182,8 +187,8 @@ section {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (262px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 262px);
+  -ms-grid-columns: (160px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 160px);
   grid-gap: 15px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -206,7 +211,7 @@ section {
 }
 
 .section-ul-li {
-  width: 262px;
+  width: 160px;
 }
 
 @media screen and (min-width: 768px) {
@@ -221,7 +226,7 @@ section {
   }
 }
 
-.section-ul-li a {
+.section-ul-li .section-ul-li-divForImg {
   width: 100%;
   height: 120px;
   margin-bottom: 10px;
@@ -231,7 +236,7 @@ section {
   overflow: hidden;
 }
 
-.section-ul-li a img {
+.section-ul-li .section-ul-li-divForImg img {
   width: 100%;
   height: 100%;
   padding: 10px 60px;
