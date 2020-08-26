@@ -281,6 +281,13 @@
                     </li>
                 </ul>
             </aside>
+            <div class="respo-categories-dropdown">
+                <ul class="car-name">
+      
+                </ul>
+                <ul class="model-name">
+                </ul>
+              </div>
             <section>
                 <ul class="section-ul parts-section-ul">
                     <li class="section-ul-li parts-section-ul-li">
@@ -691,6 +698,75 @@
           $(this).toggleClass('active');
         }, 1);
       });
+
+
+            // at start
+            const productsUlLi = document.querySelectorAll('.products-ul-li');
+      productsUlLi.forEach(li => {
+        let copyLi = li.cloneNode(true);
+        let carName = document.querySelector('.car-name');
+        copyLi.setAttribute('class', 'car-name-li');
+        copyLi.children[1].classList.add('car-name-li-ul');
+        carName.appendChild(copyLi);
+
+        $('.car-name-li .products-li-inside-ul-li').attr('class', 'model-name-li');
+      });
+
+      // launch functions
+      resetFirstCar();
+      resetFirstModel();
+      // functions
+      function insertAfter(newNode, referenceNode) {
+          referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+      };
+
+      function resetFirstModel() {
+        $('.first-model').removeClass('first-model');
+        setTimeout(() => {
+          $('.model-name .model-name-li:first-child').addClass('first-model');
+        }, 0.001);
+        
+      };
+
+      function resetFirstCar() {
+        let firstCar = document.querySelector('.car-name-li');
+
+        $('.first-car').removeClass('first-car');
+
+        firstCar.children[0].classList.add('first-car');
+
+        let modelNames = document.querySelector('.model-name');
+        modelNames.innerHTML = '';
+        let a = firstCar.cloneNode(true);
+        [...a.children[1].children].forEach(liInside => {
+          modelNames.appendChild(liInside);
+        });
+      };
+      
+
+      // event listener
+      $('body')
+        .on('click', '.first-car', function() {
+        let parent = $(this).parent().parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.first-model', function() {
+        let parent = $(this).parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.car-name-li:not(:first-child)', function() {
+
+            $('.car-name-li:first-child').insertBefore($(this));
+
+            $(this).insertBefore($('.car-name-li:first-child'));
+            
+            resetFirstCar();
+            setTimeout(() => {
+              resetFirstModel();
+            }, 0.001);
+        });
+
+
     </script>
 </body>
 

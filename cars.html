@@ -382,9 +382,7 @@
 
           </ul>
           <ul class="model-name">
-            <p>12323</p>
-            <p>12323</p>
-            <p>12323</p>
+            
           </ul>
         </div>
         <section>
@@ -896,6 +894,7 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
+      // at start
       const productsUlLi = document.querySelectorAll('.products-ul-li');
       productsUlLi.forEach(li => {
         let copyLi = li.cloneNode(true);
@@ -906,23 +905,15 @@
 
         $('.car-name-li .products-li-inside-ul-li').attr('class', 'model-name-li');
       });
-      // copy aside to dropdown
-      
 
-      // function fillCarModels() {
-      //   let firstCar = document.querySelector('.car-name-li');
-
-      //   // document.querySelectorAll('.car-name-li').forEach(carName => carName.classList.remove('first-car'));
-
-
-      //   firstCar.children[0].classList.add('first-car');
-      //   console.log(firstCar);
-      //   // let firs
-      // };
+      // launch functions
+      resetFirstCar();
+      resetFirstModel();
+      // functions
       function insertAfter(newNode, referenceNode) {
           referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
       };
-      // function 
+
       function resetFirstModel() {
         $('.first-model').removeClass('first-model');
         setTimeout(() => {
@@ -930,7 +921,6 @@
         }, 0.001);
         
       };
-
 
       function resetFirstCar() {
         let firstCar = document.querySelector('.car-name-li');
@@ -947,16 +937,29 @@
         });
       };
       
-      
 
+      // event listener
+      $('body')
+        .on('click', '.first-car', function() {
+        let parent = $(this).parent().parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.first-model', function() {
+        let parent = $(this).parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.car-name-li:not(:first-child)', function() {
 
-      // launch functions
+            $('.car-name-li:first-child').insertBefore($(this));
 
-      function resets() {
-        resetFirstCar();
-        resetFirstModel();
-      };
-      resets();
+            $(this).insertBefore($('.car-name-li:first-child'));
+            
+            resetFirstCar();
+            setTimeout(() => {
+              resetFirstModel();
+            }, 0.001);
+        });
+
 
       // rest 
       $('aside .products-a-outter').addClass('in-aside');
@@ -987,27 +990,7 @@
       });
       
 
-      // event listener
-      $('body')
-        .on('click', '.first-car', function() {
-        let parent = $(this).parent().parent();
-        parent.toggleClass('show');
-      })
-        .on('click', '.first-model', function() {
-        let parent = $(this).parent();
-        parent.toggleClass('show');
-      })
-        .on('click', '.car-name-li:not(:first-child)', function() {
 
-            $('.car-name-li:first-child').insertBefore($(this));
-
-            $(this).insertBefore($('.car-name-li:first-child'));
-            
-            resetFirstCar();
-            setTimeout(() => {
-              resetFirstModel();
-            }, 0.001);
-      });
     </script>
   </body>
 </html>
