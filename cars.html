@@ -235,15 +235,15 @@
               <a class="products-a-outter" href="#">AUDI</a>
               <ul class="products-li-inside-ul">
                 <li class="products-li-inside-ul-li">
-                  <a class="products-a-inner" href="#">NX300h 2015 - 2020</a>
+                  <a class="products-a-inner" href="#">audi 1</a>
                 </li>
                 <li class="products-li-inside-ul-li">
                   <a class="products-a-inner" href="#"
-                    >RX350/450h 2016 - 2020</a
+                    >audi 2</a
                   >
                 </li>
                 <li class="products-li-inside-ul-li">
-                  <a class="products-a-inner" href="#">CT200h 2014 - 2017</a>
+                  <a class="products-a-inner" href="#">audi 3</a>
                 </li>
               </ul>
             </li>
@@ -377,6 +377,16 @@
             </li>
           </ul>
         </aside>
+        <div class="respo-categories-dropdown">
+          <ul class="car-name">
+
+          </ul>
+          <ul class="model-name">
+            <p>12323</p>
+            <p>12323</p>
+            <p>12323</p>
+          </ul>
+        </div>
         <section>
           <ul class="section-ul cars-ul">
             <li class="section-ul-li cars-li">
@@ -886,7 +896,71 @@
     <script src="assets/js/jquery-3.2.1.min.js"></script>
     <script src="assets/js/main.js"></script>
     <script>
-      $('.products-a-outter').click(function () {
+      const productsUlLi = document.querySelectorAll('.products-ul-li');
+      productsUlLi.forEach(li => {
+        let copyLi = li.cloneNode(true);
+        let carName = document.querySelector('.car-name');
+        copyLi.setAttribute('class', 'car-name-li');
+        copyLi.children[1].classList.add('car-name-li-ul');
+        carName.appendChild(copyLi);
+
+        $('.car-name-li .products-li-inside-ul-li').attr('class', 'model-name-li');
+      });
+      // copy aside to dropdown
+      
+
+      // function fillCarModels() {
+      //   let firstCar = document.querySelector('.car-name-li');
+
+      //   // document.querySelectorAll('.car-name-li').forEach(carName => carName.classList.remove('first-car'));
+
+
+      //   firstCar.children[0].classList.add('first-car');
+      //   console.log(firstCar);
+      //   // let firs
+      // };
+      function insertAfter(newNode, referenceNode) {
+          referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+      };
+      // function 
+      function resetFirstModel() {
+        $('.first-model').removeClass('first-model');
+        setTimeout(() => {
+          $('.model-name .model-name-li:first-child').addClass('first-model');
+        }, 0.001);
+        
+      };
+
+
+      function resetFirstCar() {
+        let firstCar = document.querySelector('.car-name-li');
+
+        $('.first-car').removeClass('first-car');
+
+        firstCar.children[0].classList.add('first-car');
+
+        let modelNames = document.querySelector('.model-name');
+        modelNames.innerHTML = '';
+        let a = firstCar.cloneNode(true);
+        [...a.children[1].children].forEach(liInside => {
+          modelNames.appendChild(liInside);
+        });
+      };
+      
+      
+
+
+      // launch functions
+
+      function resets() {
+        resetFirstCar();
+        resetFirstModel();
+      };
+      resets();
+
+      // rest 
+      $('aside .products-a-outter').addClass('in-aside');
+      $('.products-a-outter.in-aside').click(function () {
         $('.products-li-inside-ul').removeClass('active');
         $('.products-li-inside-ul-li').removeClass('active');
         if ($(this).parent().hasClass('active')) {
@@ -910,6 +984,29 @@
         setTimeout(() => {
           $(this).toggleClass('active');
         }, 1);
+      });
+      
+
+      // event listener
+      $('body')
+        .on('click', '.first-car', function() {
+        let parent = $(this).parent().parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.first-model', function() {
+        let parent = $(this).parent();
+        parent.toggleClass('show');
+      })
+        .on('click', '.car-name-li:not(:first-child)', function() {
+
+            $('.car-name-li:first-child').insertBefore($(this));
+
+            $(this).insertBefore($('.car-name-li:first-child'));
+            
+            resetFirstCar();
+            setTimeout(() => {
+              resetFirstModel();
+            }, 0.001);
       });
     </script>
   </body>
