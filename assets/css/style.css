@@ -1570,6 +1570,10 @@ section {
 
 .parts-section-ul-li .parts-section-li-divForImg img {
   padding: 0 18px;
+  height: 100%;
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 
 .parts-section-ul-li h2 {
