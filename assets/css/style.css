@@ -1085,8 +1085,8 @@ main.products p {
           flex-direction: column;
   padding: 20px;
   overflow: hidden;
-  -webkit-transition: max-height 1s ease-in-out 0s;
-  transition: max-height 1s ease-in-out 0s;
+  -webkit-transition: max-height .4s ease-in-out 0s;
+  transition: max-height .4s ease-in-out 0s;
   z-index: 99;
 }
 
