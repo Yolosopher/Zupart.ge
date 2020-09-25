@@ -774,22 +774,43 @@ main.home > p {
   width: 100%;
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: (166px)[auto-fit];
-      grid-template-columns: repeat(auto-fit, 166px);
-  grid-gap: 15px;
+  -ms-grid-columns: (140px)[auto-fit];
+      grid-template-columns: repeat(auto-fit, 140px);
+  grid-gap: 5px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  padding: 0 5px;
+}
+
+@media screen and (min-width: 350px) {
+  .home-main-ul {
+    grid-gap: 15px;
+  }
 }
 
 @media screen and (min-width: 768px) {
   .home-main-ul {
+    -ms-grid-columns: (164px)[auto-fit];
+        grid-template-columns: repeat(auto-fit, 164px);
     grid-gap: 26px;
+    padding: 0;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  .home-main-ul {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 
 .home-main-ul-li a {
-  width: 164px;
+  width: 140px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -803,6 +824,12 @@ main.home > p {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+@media screen and (min-width: 768px) {
+  .home-main-ul-li a {
+    width: 164px;
+  }
 }
 
 .home-main-ul-li-divForImg {
@@ -1272,9 +1299,6 @@ section {
   -ms-grid-columns: (262px)[auto-fit];
       grid-template-columns: repeat(auto-fit, 262px);
   grid-gap: 15px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
 }
 
 @media screen and (min-width: 768px) {
@@ -1537,6 +1561,9 @@ section {
     grid-gap: 26px;
     -ms-grid-columns: (262px)[auto-fit];
         grid-template-columns: repeat(auto-fit, 262px);
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
   }
 }
 

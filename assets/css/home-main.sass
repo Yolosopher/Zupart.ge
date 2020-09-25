@@ -26,15 +26,28 @@ main.home
 .home-main-ul
     width: 100%
     display: grid
-    grid-template-columns: repeat(auto-fit, 166px)
-    grid-gap: 15px
+    grid-template-columns: repeat(auto-fit, 140px)
+    grid-gap: 5px
     justify-content: center
+    padding: 0 5px
+    @include sizePlus(350px)
+        grid-gap: 15px
     @include tabletPlus()
+        grid-template-columns: repeat(auto-fit, 164px)
         grid-gap: 26px
+        padding: 0
+        justify-content: space-between
+   
+        
+    
+    @include desktopPlus()
+        justify-content: flex-start
 
 .home-main-ul-li a
-    width: 164px
+    width: 140px
     @include flexingDir(column, space-between, center)
+    @include tabletPlus()
+        width: 164px
 
     
 .home-main-ul-li-divForImg
