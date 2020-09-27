@@ -62,10 +62,6 @@
     display: none
     position: absolute
 
-.black-screen
-    display: none
-    position: absolute
-
 table
     color: $dark2
     width: 100%
@@ -77,7 +73,6 @@ table
 th
     text-align: start
     width: 50%
-    opacity: .5
     padding-bottom: 8px
     @include tabletPlus()
         padding-bottom: 16px
@@ -96,28 +91,6 @@ td
         text-align: start
         line-height: 20px
     
-
-// hidden start
-// .singleProd-description-ul    
-//     padding: 25px
-//     @include flexingDir(column, center, flex-start)
-//     height: 275px
-//     @include font(12px, 14px)
-//     @include tabletPlus()
-//         @include font(14px, 16px)
-//     li      
-//         margin-bottom: 14px
-//         &:last-child
-//             margin-bottom: 0  
-//         width: 100%
-//         display: flex
-//     display: none
-// .singleProd-description-ul-li
-//     > *
-//         &:last-child
-//             justify-self: center
-// hidden end
-            
 
 
 
@@ -189,12 +162,4 @@ td
         z-index: 12
         padding: 5px
         border-radius: 3px
-    ~ .black-screen
-        display: block
-        width: 100vw
-        height: 100vh
-        top: 0
-        right: 0
-        background: $dark2transp
-        z-index: 5
 

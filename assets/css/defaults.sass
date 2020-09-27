@@ -17,6 +17,19 @@ a
 body
     background: $background
     color: $dark3
+    &.active
+        overflow: hidden
+        &::after 
+            content: ''
+            background: #363636
+            position: absolute
+            z-index: 12
+            width: 100vw
+            height: 1000vh
+            right: 0
+            top: 0
+            opacity: 96.5%
+
 .container
     max-width: 1156px
     margin: 0 auto    

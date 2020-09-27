@@ -164,30 +164,6 @@
                     </svg>
                 </a>
             </div>
-            <div class="black-screen"></div>
-            <!-- <ul class="singleProd-description-ul">
-                <li class="singleProd-description-ul-li">
-                    <span>კოდი:</span><span class="singleProd-code">BM125</span>
-                </li>
-                <li class="singleProd-description-ul-li">
-                    <span>მოდელი:</span><span class="singleProd-code">W212 (2009 - 2013)</span>
-                </li>
-                <li class="singleProd-description-ul-li">
-                    <span>დასახელება:</span><span class="singleProd-code">რადიატორი</span>
-                </li>
-                <li class="singleProd-description-ul-li">
-                    <span>ფასი:</span>
-                    <span class="singleProd-code">
-                        <span class="current-price">230</span> ₾
-                            <span class="part-price-discount">
-                                <span class="part-discount-price">260</span> ლ
-                            </span>
-                    </span>
-                </li>
-                <li class="singleProd-description-ul-li">
-                    <span>შენიშვნა:</span><p class="singleProd-code">რადიატორის მილები არ მოყვება</p>
-                </li>
-            </ul> -->
             <div class="table-container">
                 <table class="tg">
                     <tbody>
@@ -415,9 +391,11 @@
             });
         });
         $('.singleProd-slider-mainPhoto').click(function () {
+            $('body').addClass('active');
             $('#singleProd-slider').addClass('zoomed');
         });
         $('.turn-off-zoomed').click(function() {
+            $('body').removeClass('active');
             $('#singleProd-slider').removeClass('zoomed');
         });
     </script>

@@ -81,6 +81,22 @@ body {
   color: #18191A;
 }
 
+body.active {
+  overflow: hidden;
+}
+
+body.active::after {
+  content: '';
+  background: #363636;
+  position: absolute;
+  z-index: 12;
+  width: 100vw;
+  height: 1000vh;
+  right: 0;
+  top: 0;
+  opacity: 96.5%;
+}
+
 .container {
   max-width: 1156px;
   margin: 0 auto;
@@ -1885,11 +1901,6 @@ section {
   position: absolute;
 }
 
-.black-screen {
-  display: none;
-  position: absolute;
-}
-
 table {
   color: #242526;
   width: 100%;
@@ -1905,7 +1916,6 @@ table .part-price-discount {
 th {
   text-align: start;
   width: 50%;
-  opacity: .5;
   padding-bottom: 8px;
 }
 
@@ -2055,16 +2065,6 @@ td {
   z-index: 12;
   padding: 5px;
   border-radius: 3px;
-}
-
-#singleProd-slider.zoomed ~ .black-screen {
-  display: block;
-  width: 100vw;
-  height: 100vh;
-  top: 0;
-  right: 0;
-  background: #242526CC;
-  z-index: 5;
 }
 
 .first-car::after {

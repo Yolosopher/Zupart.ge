@@ -51,6 +51,22 @@ body {
   color: #18191A;
 }
 
+body.active {
+  overflow: hidden;
+}
+
+body.active::after {
+  content: '';
+  background: #363636;
+  position: absolute;
+  z-index: 12;
+  width: 100vw;
+  height: 1000vh;
+  right: 0;
+  top: 0;
+  opacity: 96.5%;
+}
+
 .container {
   max-width: 1156px;
   margin: 0 auto;
