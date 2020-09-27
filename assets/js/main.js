@@ -41,3 +41,6 @@ document.addEventListener('DOMContentLoaded', ()=>{
 window.addEventListener('resize', ()=>{
     respoMenu();
 });
+$('img').bind('contextmenu', function(e){
+    return false;
+}); 
