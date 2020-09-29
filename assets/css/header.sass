@@ -27,6 +27,8 @@ header.container
             height: 22px
             @include centering()
             margin-right: 10px
+        > span
+            margin: 0 5px
 
 .default-infos-numbers
     margin-right: 25px
@@ -88,7 +90,7 @@ header.container
         height: 90px
         width: 100%
         z-index: -1
-    @include desktopPlus()
+    @include tabletPlus()
         @include flexing(space-between, center)
 
 .header-logo
