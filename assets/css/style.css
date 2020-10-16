@@ -1398,8 +1398,8 @@ section {
   display: block;
   max-height: 0;
   overflow: hidden;
-  -webkit-transition: max-height .4s ease-in-out 0s, margin-top .4s ease-in-out 0s;
-  transition: max-height .4s ease-in-out 0s, margin-top .4s ease-in-out 0s;
+  -webkit-transition: max-height .6s ease-in-out 0s, margin-top .1s ease-in-out 0s;
+  transition: max-height .6s ease-in-out 0s, margin-top .1s ease-in-out 0s;
 }
 
 .products-li-inside-ul.active {
