@@ -792,10 +792,6 @@
         $('.products-ul-li.active').removeClass('active');
         let nextUl = $(this).next();
         nextUl.removeClass('active');
-        nextUl.addClass('removing');
-        setTimeout(() => {
-          nextUl.removeClass('removing');
-        }, 1000);
       } else {
         $('.products-ul-li.active').removeClass('active');
         $(this).parent().toggleClass('active');
