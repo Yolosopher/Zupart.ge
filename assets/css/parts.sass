@@ -7,10 +7,11 @@
     // overflow: hidden
     max-height: 0
     overflow: hidden
-    transition: max-height .6s ease-in-out 0s, margin-top .1s ease-in-out 0s
+    transition: max-height -200ms 300ms ease-out, margin-top .1s ease-in-out 0s
     &.active 
         margin-top: 9px  
-        max-height: 200px
+        max-height: 9999px
+        transition: max-height 400ms ease-in
 
 section
     flex: 1
