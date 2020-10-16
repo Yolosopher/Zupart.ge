@@ -1257,6 +1257,10 @@ aside .products-ul {
   margin-bottom: 0;
 }
 
+.products-ul-li .products-li-inside-ul-li:first-child {
+  margin-top: 8px;
+}
+
 .products-li-inside-ul-li.active .products-a-inner {
   color: #3690E6;
 }
@@ -1403,7 +1407,6 @@ section {
 }
 
 .products-li-inside-ul.active {
-  margin-top: 9px;
   max-height: 9999px;
   -webkit-transition: max-height 400ms ease-in;
   transition: max-height 400ms ease-in;
