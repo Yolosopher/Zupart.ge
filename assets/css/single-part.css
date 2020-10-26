@@ -265,13 +265,10 @@ td {
      object-fit: contain;
   height: 100%;
   width: 100%;
-  opacity: .3;
-  -webkit-transition: opacity .4s;
-  transition: opacity .4s;
 }
 
-.singleProd-slider-photoList ul li a.active img {
-  opacity: 1;
+.singleProd-slider-photoList ul li a.active {
+  border: 1px #000 solid;
 }
 
 #singleProd-slider.zoomed {

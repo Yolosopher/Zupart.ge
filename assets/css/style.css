@@ -375,9 +375,39 @@ header.container {
   color: white;
 }
 
+@font-face {
+  font-family: HelvNeue;
+  src: url(../fonts/75-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraBook;
+  src: url(../fonts/FIRAGO-BOOK.TTF);
+}
+
+@font-face {
+  font-family: Helvetica Neue;
+  src: url(../fonts/MyriadGEOMtavruliMedium.ttf);
+}
+
+@font-face {
+  font-family: FiraRegular;
+  src: url(../fonts/FiraGO-Regular.ttf);
+}
+
+@font-face {
+  font-family: FiraBold;
+  src: url(../fonts/FiraGO-Bold.ttf);
+}
+
+@font-face {
+  font-family: FiraMedium;
+  src: url(../fonts/FIRAGO-MEDIUM2.TTF);
+}
+
 footer {
   height: 258px;
-  font-size: 12px;
+  font-size: 14px;
   line-height: 14px;
   color: #18191A;
   display: -webkit-box;
@@ -519,7 +549,7 @@ footer::after {
 }
 
 .footer-inside-bottom .default-infos {
-  font-size: 14px;
+  font-size: 16px;
   line-height: 17px;
   color: #3A3B3C;
   height: unset;
@@ -1029,7 +1059,7 @@ iframe {
 .contact-li-heading {
   margin-bottom: 15px;
   color: #242526;
-  font-size: 14px;
+  font-size: 16px;
   line-height: 16px;
   opacity: .5;
   font-family: HelvNeue;
@@ -1049,7 +1079,7 @@ iframe {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
-  font-size: 12px;
+  font-size: 13px;
   line-height: 14px;
   color: #18191A;
   font-family: FiraBold;
@@ -1454,6 +1484,16 @@ section {
   padding: 30px;
   padding-top: 20px;
   min-height: 304px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 @media screen and (min-width: 768px) {
@@ -1470,17 +1510,18 @@ section {
 
 .parts-section-ul-li .parts-section-li-divForImg {
   margin: 0 auto;
-  margin-bottom: 16px;
-  height: 110px;
+  margin-bottom: 2px;
   background: unset;
   border-radius: 10px;
+  overflow: hidden;
+  height: 165px;
 }
 
 .parts-section-ul-li .parts-section-li-divForImg img {
   height: 100%;
   width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
+  -o-object-fit: cover;
+     object-fit: cover;
   -webkit-transition: -webkit-transform .4s ease-out;
   transition: -webkit-transform .4s ease-out;
   transition: transform .4s ease-out;
@@ -1499,12 +1540,14 @@ section {
 .parts-section-ul-li h2 {
   font-family: FiraMedium;
   color: #3A3B3C;
-  margin-bottom: 18px;
+  margin-bottom: 2px;
   text-align: unset;
+  height: 34px;
+  overflow: hidden;
 }
 
 .parts-section-ul-li .parts-price {
-  margin-bottom: 16px;
+  margin-bottom: 2px;
   font-family: Helvneue;
   font-size: 18px;
   line-height: 21px;
@@ -1547,6 +1590,19 @@ section {
   margin-bottom: 7px;
 }
 
+.parts-section-ul-li > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
 .pagination {
   margin: 0 auto;
   margin-top: 40px;
@@ -1571,6 +1627,7 @@ section {
   height: 100%;
   width: 34px;
   border-radius: 50%;
+  position: relative;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1614,6 +1671,11 @@ section {
 
 .pagination .left-prev::after {
   content: url(../images/parts/left-arrow.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .pagination .left-prev:hover::after {
@@ -1622,6 +1684,11 @@ section {
 
 .pagination .right-next::after {
   content: url(../images/parts/right-arrow.svg);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
 }
 
 .pagination .right-next:hover::after {
@@ -1895,13 +1962,10 @@ td {
      object-fit: contain;
   height: 100%;
   width: 100%;
-  opacity: .3;
-  -webkit-transition: opacity .4s;
-  transition: opacity .4s;
 }
 
-.singleProd-slider-photoList ul li a.active img {
-  opacity: 1;
+.singleProd-slider-photoList ul li a.active {
+  border: 1px #000 solid;
 }
 
 #singleProd-slider.zoomed {
