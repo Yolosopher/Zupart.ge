@@ -1291,11 +1291,7 @@ aside .products-ul {
   margin-top: 8px;
 }
 
-.products-li-inside-ul-li.active .products-a-inner {
-  color: #3690E6;
-}
-
-.products-li-inside-ul-li .products-a-inner:hover {
+.products-li-inside-ul-li .products-a-inner:hover, .products-li-inside-ul-li .products-a-inner.active {
   color: #3690E6;
 }
 
@@ -1640,7 +1636,7 @@ section {
   background: white;
 }
 
-.pagination a:hover {
+.pagination a:hover, .pagination a.active {
   background: #3690E6;
   color: white;
 }
