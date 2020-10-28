@@ -14,18 +14,21 @@
 
 section
     flex: 1
-.section-ul
+.section-ul.parts-section-ul
     width: 100%
     display: grid
-    grid-template-columns: repeat(auto-fit, 262px)
+    grid-template-columns: repeat(auto-fit, 100%)
     grid-gap: 15px
     justify-content: center
+
     @include tabletPlus()
         grid-template-columns: repeat(auto-fit, 235px)
     @include desktopPlus()
         grid-gap: 26px
         grid-template-columns: repeat(auto-fit, 262px)
         justify-content: flex-start
+    .section-ul-li
+        width: 100%
 .parts-section-ul-li
     background: white
     border-radius: 10px

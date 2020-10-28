@@ -6,13 +6,23 @@ article.about
         @include tabletPlus()
             font-size: 26px
             line-height: 31px
-    p
+    p, .about-p
         font-size: 14px
         line-height: 20px
         font-family: FiraBook
-        padding-top: 40px
+        padding-top: 30px
         @include tabletPlus()
             padding: 40px 96px 0
+    .about-p 
+        *
+            font-size: inherit
+            line-height: inherit
+            font-family: inherit
+        li
+            // list-style: initial
+            list-style-type: initial
+            list-style-position: inside
+
 
     img
         width: 100%

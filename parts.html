@@ -766,6 +766,16 @@
             setTimeout(() => {
               resetFirstModel();
             }, 0.001);
+        })
+        .on('click', '.model-name-li:not(:first-child)', function() {
+            $('.model-name-li:first-child').insertBefore($(this));
+
+            $(this).insertBefore($('.model-name-li:first-child'));
+            
+            resetFirstCar();
+            setTimeout(() => {
+              resetFirstModel();
+            }, 0.001);
         });
 
 

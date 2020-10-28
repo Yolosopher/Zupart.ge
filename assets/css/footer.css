@@ -191,7 +191,7 @@ footer::after {
           align-items: center;
 }
 
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 390px) {
   .footer-inside-bottom .default-infos {
     font-size: 12px;
   }
@@ -298,6 +298,10 @@ footer::after {
         -ms-flex-order: unset;
             order: unset;
   }
+}
+
+.creator-respo span {
+  color: #3690E6;
 }
 
 .rights-reserved {

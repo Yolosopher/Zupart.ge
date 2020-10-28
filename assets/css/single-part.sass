@@ -2,8 +2,20 @@
 
 .singleProd-top-line-price
     display: none
+    position: relative
     @include tabletPlus()
         display: unset
+        &::after
+            position: relative
+            margin-left: 8px
+            content: ''
+            display: inline-block
+            border-radius: 5px
+            width: 3px
+            height: 31px
+            top: 5px
+            background: $blue
+        
 
 
 .singleProd-top-line-div
@@ -80,6 +92,7 @@ tr
     &:last-child
         th           
             padding-bottom: 0
+            vertical-align: top
     @include font(12px, 14px)
     @include tabletPlus()
         @include font(14px, 16px)
@@ -138,7 +151,7 @@ td
     width: calc(100% - 30px)
     height: 345px
     position: fixed
-    overflow: hidden
+    overflow: visible
     background: white
     padding: 50px 50px
     z-index: 13
@@ -150,7 +163,7 @@ td
         width: 60%
         height: 500px
         min-width: 700px
-        max-width: 750px
+        max-width: 742px
         padding: 4% 5%
     .singleProd-slider-mainPhoto
         height: calc(100% - 60px - 10%)
@@ -161,4 +174,13 @@ td
         z-index: 12
         padding: 5px
         border-radius: 3px
-
+    .singleProd-slider-photoList
+        @media screen and (max-width: 768px)
+            position: absolute
+            bottom: -70px
+            ul
+                flex-wrap: wrap
+            li
+                background: white
+                overflow: hidden
+                border-radius: 6px
