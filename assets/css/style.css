@@ -486,6 +486,12 @@ footer::after {
   width: 364px;
 }
 
+@media screen and (min-width: 768px) {
+  .footer-inside-top .footer-nav {
+    margin: 0 auto;
+  }
+}
+
 .footer-inside-top .footer-nav-ul {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -2107,5 +2113,9 @@ td {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.products-a-inner {
+  cursor: pointer;
 }
 /*# sourceMappingURL=style.css.map */
